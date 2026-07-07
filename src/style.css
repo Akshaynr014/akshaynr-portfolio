@@ -16,7 +16,7 @@ html {
 
 html[data-theme="light"] {
   --page-bg: #f6fbff;
-  --panel-bg: rgba(15, 23, 42, 0.055);
+  --panel-bg: rgba(255, 255, 255, 0.78);
   --panel-border: rgba(15, 23, 42, 0.12);
   --soft-text: #334155;
   --muted-text: #64748b;
@@ -42,6 +42,12 @@ html[data-theme="light"] body {
     radial-gradient(circle at 18% 12%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 82% 8%, rgba(245, 158, 11, 0.16), transparent 26%),
     linear-gradient(135deg, #f8fafc 0%, #ecfeff 48%, #f8fafc 100%);
+}
+
+html[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
 }
 
 body::before {
@@ -79,12 +85,25 @@ html[data-theme="light"] .nav-link:hover {
   @apply inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-2 text-sm font-bold text-slate-200 transition hover:border-teal-300/50 hover:bg-teal-300/10 hover:text-white;
 }
 
+html[data-theme="light"] .utility-btn,
+html[data-theme="light"] .icon-link {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: #0f172a;
+}
+
 .primary-btn {
   @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-teal-300 to-amber-200 px-6 py-3 font-bold text-slate-950 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-teal-500/20;
 }
 
 .secondary-btn {
   @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-6 py-3 font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:border-teal-300/60 hover:bg-white/15;
+}
+
+html[data-theme="light"] .secondary-btn {
+  border-color: rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f172a;
 }
 
 .glass-panel {
@@ -95,6 +114,12 @@ html[data-theme="light"] .nav-link:hover {
 
 .skill-badge {
   @apply rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-sm font-medium text-slate-200 transition group-hover:border-teal-200/30 group-hover:bg-teal-200/10;
+}
+
+html[data-theme="light"] .skill-badge {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: #1e293b;
 }
 
 .icon-link {
@@ -140,6 +165,14 @@ html[data-theme="light"] .spotlight {
   animation: deviceFloat 7s ease-in-out infinite;
 }
 
+html[data-theme="light"] .hero-device {
+  border-color: rgba(15, 23, 42, 0.12);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(236, 254, 255, 0.82)),
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.18), transparent 42%);
+  box-shadow: 0 40px 110px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
 .hero-device::before {
   position: absolute;
   inset: -1px;
@@ -161,6 +194,13 @@ html[data-theme="light"] .spotlight {
   background:
     radial-gradient(circle at 50% 18%, rgba(251, 191, 36, 0.28), transparent 35%),
     linear-gradient(160deg, rgba(45, 212, 191, 0.18), rgba(56, 189, 248, 0.08));
+}
+
+html[data-theme="light"] .profile-shell {
+  border-color: rgba(15, 23, 42, 0.12);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(245, 158, 11, 0.22), transparent 35%),
+    linear-gradient(160deg, rgba(20, 184, 166, 0.18), rgba(14, 165, 233, 0.1));
 }
 
 .profile-shell::before {
@@ -219,12 +259,21 @@ html[data-theme="light"] .spotlight {
   padding: 14px 16px;
 }
 
+html[data-theme="light"] .feature-row {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+}
+
 .feature-row span {
   color: #94a3b8;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+html[data-theme="light"] .feature-row span {
+  color: #64748b;
 }
 
 .feature-row strong {
@@ -236,7 +285,10 @@ html[data-theme="light"] .feature-row strong,
 html[data-theme="light"] h1,
 html[data-theme="light"] h2,
 html[data-theme="light"] h3,
-html[data-theme="light"] .text-white {
+html[data-theme="light"] .text-white,
+html[data-theme="light"] .font-semibold,
+html[data-theme="light"] .font-bold,
+html[data-theme="light"] .font-black {
   color: #0f172a;
 }
 
@@ -251,6 +303,32 @@ html[data-theme="light"] .text-slate-400 {
 
 html[data-theme="light"] header {
   background: rgba(248, 250, 252, 0.78);
+}
+
+html[data-theme="light"] header,
+html[data-theme="light"] .border-white\/10,
+html[data-theme="light"] .border-white\/15 {
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+html[data-theme="light"] header .bg-\[\#061018\]\/95 {
+  background-color: rgba(248, 250, 252, 0.96);
+}
+
+html[data-theme="light"] header .text-slate-100 {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .bg-white\/\[0\.06\],
+html[data-theme="light"] .bg-white\/\[0\.07\],
+html[data-theme="light"] .bg-white\/\[0\.05\],
+html[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="light"] .bg-slate-950\/80,
+html[data-theme="light"] .bg-slate-950\/70 {
+  background-color: rgba(255, 255, 255, 0.82);
 }
 
 .typing-line {
@@ -358,6 +436,26 @@ html[data-theme="light"] header {
   font-weight: 700;
 }
 
+html[data-theme="light"] .snapshot-card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .tilt-card,
+html[data-theme="light"] .metric-card,
+html[data-theme="light"] .contact-card {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.1);
+}
+
+html[data-theme="light"] .snapshot-card p {
+  color: #0f766e;
+}
+
+html[data-theme="light"] .marquee-track span {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+}
+
 .marquee-wrap {
   overflow: hidden;
   border-block: 1px solid rgba(255, 255, 255, 0.08);
@@ -402,6 +500,14 @@ html[data-theme="light"] header {
     radial-gradient(circle at 78% 20%, rgba(251, 191, 36, 0.22), transparent 28%),
     radial-gradient(circle at 20% 80%, rgba(94, 234, 212, 0.2), transparent 32%),
     linear-gradient(135deg, rgba(15, 23, 42, 0.86), rgba(6, 16, 24, 0.94));
+}
+
+html[data-theme="light"] .project-visual {
+  border-color: rgba(15, 23, 42, 0.12);
+  background:
+    radial-gradient(circle at 78% 20%, rgba(245, 158, 11, 0.2), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(20, 184, 166, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 254, 255, 0.86));
 }
 
 .project-visual::before {
@@ -545,6 +651,12 @@ html[data-theme="light"] header {
   animation: servicePulse 3.2s ease-in-out infinite;
 }
 
+html[data-theme="light"] .architecture-board span {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+}
+
 .modal-panel,
 .command-panel {
   overflow: hidden;
@@ -554,6 +666,19 @@ html[data-theme="light"] header {
     linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(6, 16, 24, 0.94)),
     radial-gradient(circle at top right, rgba(45, 212, 191, 0.2), transparent 42%);
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.48);
+}
+
+html[data-theme="light"] .modal-panel,
+html[data-theme="light"] .command-panel {
+  border-color: rgba(15, 23, 42, 0.14);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(236, 254, 255, 0.94)),
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.16), transparent 42%);
+  box-shadow: 0 40px 120px rgba(15, 23, 42, 0.18);
+}
+
+html[data-theme="light"] .command-item {
+  color: #0f172a;
 }
 
 .modal-panel {
@@ -586,6 +711,15 @@ html[data-theme="light"] header {
 
 .contact-card {
   @apply rounded-2xl border border-white/10 bg-white/[0.05] p-5 hover:border-teal-300/40 hover:bg-white/[0.08];
+}
+
+html[data-theme="light"] .contact-card p:last-child {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .mini-contact {
+  background: rgba(15, 23, 42, 0.88);
+  color: #ffffff;
 }
 
 .mini-contact {
@@ -733,7 +867,7 @@ html[data-theme="light"] header {
     grid-template-columns: 1fr;
   }
 
-  .floating-dock {
+.floating-dock {
     bottom: 12px;
     left: 50%;
     right: auto;
@@ -748,6 +882,23 @@ html[data-theme="light"] header {
     top: auto;
     transform: translateX(-50%);
   }
+}
+
+html[data-theme="light"] .floating-dock {
+  border-color: rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.14);
+}
+
+html[data-theme="light"] .floating-dock a,
+html[data-theme="light"] .floating-dock button {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .dock-toast {
+  border-color: rgba(20, 184, 166, 0.32);
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f766e;
 }
 
 @media (max-width: 380px) {
