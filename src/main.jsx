@@ -1010,8 +1010,51 @@ function FloatingDock({ setIsCommandOpen }) {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-400">
-      <p>(c) {new Date().getFullYear()} Akshay N R. Built with React, Vite, and Tailwind CSS.</p>
+    <footer className="footer-section">
+      <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <div className="grid gap-8 border-b border-white/10 pb-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+          <div>
+            <a href="#home" className="inline-flex items-center gap-3">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-teal-300 to-amber-200 text-sm font-black text-slate-950">
+                AN
+              </span>
+              <span>
+                <strong className="block text-lg text-white">Akshay N R</strong>
+                <small className="text-sm font-semibold text-slate-400">Java Full Stack Developer</small>
+              </span>
+            </a>
+            <p className="mt-4 max-w-md leading-7 text-slate-400">
+              Building secure Java backends, responsive React interfaces, and practical full-stack applications for modern teams.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="footer-title">Explore</h3>
+            <div className="mt-4 grid gap-2">
+              {["About", "Skills", "Projects", "Experience"].map((link) => (
+                <a key={link} href={`#${link.toLowerCase()}`} className="footer-link">
+                  {link}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="footer-title">Connect</h3>
+            <div className="mt-4 grid gap-2">
+              <a href={`mailto:${profile.email}`} className="footer-link">Email</a>
+              <a href={`tel:${profile.phone.replaceAll(" ", "")}`} className="footer-link">Phone</a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
+              <a href={profile.github} target="_blank" rel="noreferrer" className="footer-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>Copyright {new Date().getFullYear()} Akshay N R. All rights reserved.</p>
+          <p>Designed and developed with React, Vite, and Tailwind CSS.</p>
+        </div>
+      </div>
     </footer>
   );
 }
