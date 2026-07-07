@@ -1,0 +1,13 @@
+{
+  "name": "Akshay N R Portfolio",
+  "short_name": "Akshay N R",
+  "description": "Portfolio of Akshay N R, Java Full Stack Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061018",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
