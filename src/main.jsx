@@ -242,7 +242,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#061018] text-slate-100">
+    <div className="app-shell min-h-screen overflow-hidden text-slate-100">
       <Spotlight />
       <AnimatedBackground />
       <div className="fixed left-0 top-0 z-[60] h-1 bg-gradient-to-r from-teal-300 via-sky-300 to-amber-200 transition-all duration-150" style={{ width: `${progress}%` }} />

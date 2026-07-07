@@ -31,12 +31,27 @@ body {
     linear-gradient(135deg, #061018 0%, #0f172a 48%, #111827 100%);
 }
 
+.app-shell {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(45, 212, 191, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 8%, rgba(251, 191, 36, 0.13), transparent 24%),
+    linear-gradient(135deg, #061018 0%, #0f172a 48%, #111827 100%);
+}
+
 main {
   position: relative;
   z-index: 2;
 }
 
 html[data-theme="light"] body {
+  color: #0f172a;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(20, 184, 166, 0.18), transparent 30%),
+    radial-gradient(circle at 82% 8%, rgba(245, 158, 11, 0.16), transparent 26%),
+    linear-gradient(135deg, #f8fafc 0%, #ecfeff 48%, #f8fafc 100%);
+}
+
+html[data-theme="light"] .app-shell {
   color: #0f172a;
   background:
     radial-gradient(circle at 18% 12%, rgba(20, 184, 166, 0.18), transparent 30%),
@@ -923,4 +938,52 @@ html[data-theme="light"] .dock-toast {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+html[data-theme="light"] #home h1,
+html[data-theme="light"] section h2,
+html[data-theme="light"] section h3 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] #home p:not(.typing-line),
+html[data-theme="light"] section p,
+html[data-theme="light"] section li,
+html[data-theme="light"] .feature-row strong,
+html[data-theme="light"] .command-item,
+html[data-theme="light"] .contact-card p:last-child {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] #home .inline-flex,
+html[data-theme="light"] .glass-panel,
+html[data-theme="light"] .snapshot-card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .tilt-card,
+html[data-theme="light"] .metric-card,
+html[data-theme="light"] .contact-card {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html[data-theme="light"] .hero-device,
+html[data-theme="light"] .glass-panel {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+html[data-theme="light"] .typing-line,
+html[data-theme="light"] .profile-fallback,
+html[data-theme="light"] .primary-btn {
+  color: #061018 !important;
+}
+
+html[data-theme="light"] .secondary-btn,
+html[data-theme="light"] .filter-pill,
+html[data-theme="light"] .skill-badge {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .mini-contact,
+html[data-theme="light"] .mini-contact span,
+html[data-theme="light"] .bg-slate-950 {
+  color: #ffffff !important;
 }
